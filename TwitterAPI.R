@@ -3,6 +3,7 @@ library(RCurl)
 library(RJSONIO)
 library(stringr)
 library(streamR)
+library(dplyr)    
 
 # Declare Twitter API Credentials
 api_key <- "bNcpnkZVRB8fXRqb7XVWdVMOA" # From dev.twitter.com
@@ -18,4 +19,7 @@ team1 <- ""
 team2 <- ""
 
 # Run Twitter Search. Format is searchTwitter("Search Terms", n=100, lang="en", geocode="lat,lng", also accepts since and until).
-tweets <- searchTwitter("NBA", n=100, lang="en", since=("2017-09-23 06:11:30"))
+tweets <- searchTwitter("Lebron James", n=10000, lang="en", since=("2017-09-21"), until=("2017-09-22"))
+tweets.df <- twListToDF(tweets)
+tweets.df$created <- as.POSIXct(tweets.df$created)
+final.tweets <- filter(tweets.df, created > as.POSIXct("2017-09-21 20:39:18", tz ="GMT"))
