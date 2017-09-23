@@ -4,7 +4,6 @@ library(RJSONIO)
 library(stringr)
 library(streamR)
 library(dplyr) 
-library(sqldf)
 
 # Declare Twitter API Credentials
 api_key <- "bNcpnkZVRB8fXRqb7XVWdVMOA" # From dev.twitter.com
