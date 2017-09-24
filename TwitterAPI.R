@@ -59,4 +59,3 @@ while (i <= 2) {
   runTwitterSearch(team1, team2, date, startTime)
   i <- i + 1
 }
-
