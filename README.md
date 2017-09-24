@@ -20,7 +20,7 @@ Through this, we developed win percentage during games through a linear regressi
 Point Differential was found to be the most significant feature. 
 
 ## Predicting Breakout Points
-Then, we used a machine learning package called 'Breakout Point' in R on to detect change in a given time series of win percentage over the time of a game. By incorporating this method, our model can now highlight important and "exciting" runs in the ```{r}loc``` variable of the results ```{r}res``` for each game, running the package's ```{r}breakout``` method.
+Then, we used a machine learning package called 'Breakout Point' in R on to detect change in a given time series of win percentage over the time of a game. By incorporating this method, our model can now highlight important and "exciting" runs in the ```loc``` variable of the results ```res``` for each game, running the package's ```breakout``` method.
 
 * BreakoutDetection.R
 
